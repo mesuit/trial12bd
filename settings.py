@@ -6,6 +6,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "core",          # 👈 add this
     "dashboard",
 ]
 
@@ -14,3 +15,6 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
 }
+
+# 👇 tell Django to use custom user
+AUTH_USER_MODEL = "core.User"
