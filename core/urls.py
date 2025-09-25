@@ -5,5 +5,6 @@ urlpatterns = [
     path("auth/signup/", views.signup),
     path("auth/login/", views.login),
     path("dashboard/", views.dashboard),
+     path("api/core/", include("core.urls")),
     path("assignments/submit/", views.submit_assignment),
 ]
